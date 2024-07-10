@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado do Quiz - Trilhando o Sucesso Financeiro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="results-container">
+        <div id="results">
+            <div class="results-header">
+                <h1>Parabéns!</h1>
+                <p>Você concluiu o quiz!</p>
+            </div>
+            <div class="results-body">
+                <h2 id="score"></h2>
+                <p>Descubra mais sobre como alcançar a independência financeira com nosso eBook!</p>
+                <a href="sales-page.html" class="btn">Compre Agora</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const score = urlParams.get('score');
+        document.getElementById('score').innerText = Você acertou ${score} perguntas!;
+    </script>
+</body>
+</html>
